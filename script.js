@@ -10,7 +10,6 @@ cards.forEach((card) => {
 
 // Pointer effects run only with a mouse or trackpad and the user's motion preference.
 const finePointer = window.matchMedia('(any-hover: hover) and (any-pointer: fine)');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const motionToggle = document.querySelector('.motion-toggle');
 let motionPreference = null;
 try {
@@ -170,7 +169,7 @@ function animatePortrait() {
 function syncPointerEffects() {
   removePointerEffects();
   removePointerEffects = () => {};
-  const enabled = finePointer.matches && (motionPreference ? motionPreference === 'on' : !reducedMotion.matches);
+  const enabled = finePointer.matches && motionPreference !== 'off';
   motionToggle.hidden = !finePointer.matches;
   motionToggle.setAttribute('aria-pressed', String(enabled));
   motionToggle.querySelector('.pressable-face').textContent = enabled ? 'MOTION ON' : 'MOTION OFF';
@@ -253,7 +252,6 @@ function syncPointerEffects() {
 }
 
 finePointer.addEventListener('change', syncPointerEffects);
-reducedMotion.addEventListener('change', syncPointerEffects);
 motionToggle.addEventListener('click', () => {
   motionPreference = motionToggle.getAttribute('aria-pressed') === 'true' ? 'off' : 'on';
   try { localStorage.setItem('portfolio-motion', motionPreference); } catch { /* The toggle still works without storage. */ }

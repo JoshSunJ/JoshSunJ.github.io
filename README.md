@@ -25,4 +25,4 @@ GitHub Pages publishes the `main` branch from the repository root. No build step
 
 The raised controls use a fixed base and a translating front face, inspired by Josh W. Comeau’s [3D button tutorial](https://www.joshwcomeau.com/animation/3d-button/), adapted to this portfolio’s monochrome design.
 
-The frameless ASCII portrait responds to the mouse with a short character ripple, shares the motion toggle, and stays static for touch or reduced motion preferences. Its caption reads “me @ griffith observatory.”
+The frameless ASCII portrait responds to the mouse with a short character ripple and shares the motion toggle. Pointer animations start on for mouse and trackpad users; choosing Motion Off saves that preference for future visits. Touch devices show the static portrait. Its caption reads “me @ griffith observatory.”
