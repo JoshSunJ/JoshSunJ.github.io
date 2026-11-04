@@ -1,7 +1,6 @@
-# Joshua Sun — Portfolio
+# Personal Portfolio Website
 
-Joshua Sun’s responsive, monochrome portfolio, with selected projects in software engineering, machine learning, and applied mathematics.
-
+A responsive, monochrome portfolio, with selected projects, updated regularly. 
 Website: https://joshsunj.github.io
 
 ## Local preview
